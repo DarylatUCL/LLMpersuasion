@@ -1,7 +1,7 @@
 # description for binaryV_v2.R
 
 ## Overview
-This script generates simulated data for a study comparing the persuasive effectiveness of LLMs (Large Language Models) versus humans.
+This script (binaryV_v2.R) generates simulated data for a study comparing the persuasive effectiveness of LLMs (Large Language Models) versus humans.
 The simulation creates binary response data for two independent groups of participants, with each participant responding to multiple questions under both positive and negative persuasion conditions.
 
 ## Parameters
@@ -54,3 +54,18 @@ The script outputs a combined data frame (`combined_data`) containing all respon
 3. Question effects are independent
 4. No learning or order effects
 5. Equal sample sizes across conditions
+
+## Related Analyses
+The generated data can be analyzed using two complementary Bayesian equivalence testing approaches:
+
+1. Within-Condition Analysis (see eqTestingBayes1.R)
+(a) Examines equivalence between positive and negative persuasion effects within the LLM condition
+(b) Uses Bayesian linear mixed modelling with appropriate ROPE values (only random intercept is included for this example, but random slopes can also be included)
+(c) Focuses on comparing effectiveness of different persuasion directions
+
+2. Between-Condition Analysis (see eqTestingBayes2.R)
+(a) Compares overall effectiveness between LLM and human conditions
+(b) Uses Bayesian between-groups comparison (no mixed modelling)
+(c) Assesses whether LLM persuasion is as effective as human persuasion
+
+Both analyses employ Bayesian equivalence testing to assess practical equivalence, allowing for flexible definition of equivalence bounds (ROPE) and providing posterior distributions and credible intervals for comprehensive inference.
