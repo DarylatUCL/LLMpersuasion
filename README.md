@@ -63,6 +63,21 @@ The generated data can be subject to two subsequent Bayesian equivalence testing
 * Uses Bayesian linear mixed modelling with appropriate ROPE values (only random intercept is included for this example, but random slopes can also be included)
 * Focuses on comparing effectiveness of different persuasion directions
 
+Based on the current setting, the results should be as follows:
+
+```
+# Test for Practical Equivalence
+
+  ROPE: [-0.10 0.10]
+
+Parameter                    |        H0 | inside ROPE |        95% HDI
+-----------------------------------------------------------------------
+Intercept                    |  Rejected |      0.00 % |   [0.34, 0.35]
+persuasion_directionpositive | Undecided |     32.05 % | [-0.11, -0.09]
+```
+
+
+
 2. Between-Condition Analysis (see eqTestingBayes2.R)
 * Compares overall effectiveness between LLM and human conditions
 * Uses Bayesian between-groups comparison (no mixed modelling)
