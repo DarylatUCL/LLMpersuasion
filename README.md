@@ -59,20 +59,26 @@ The script outputs a combined data frame (`combined_data`) containing all respon
 The generated data can be analyzed using two complementary Bayesian equivalence testing approaches:
 
 1. Within-Condition Analysis (see eqTestingBayes1.R)
-1.1 Examines equivalence between positive and negative persuasion effects within the LLM condition
-1.2 Uses Bayesian linear mixed modelling with appropriate ROPE values (only random intercept is included for this example, but random slopes can also be included)
-1.3 Focuses on comparing effectiveness of different persuasion directions
+* Examines equivalence between positive and negative persuasion effects within the LLM condition
+* Uses Bayesian linear mixed modelling with appropriate ROPE values (only random intercept is included for this example, but random slopes can also be included)
+* Focuses on comparing effectiveness of different persuasion directions
 
 2. Between-Condition Analysis (see eqTestingBayes2.R)
-2.1 Compares overall effectiveness between LLM and human conditions
-2.2 Uses Bayesian between-groups comparison (no mixed modelling)
-2.3 Assesses whether LLM persuasion is as effective as human persuasion
+* Compares overall effectiveness between LLM and human conditions
+* Uses Bayesian between-groups comparison (no mixed modelling)
+* Assesses whether LLM persuasion is as effective as human persuasion
 
 Based on the current setting, the results should be as follows:
+
+```
+# Test for Practical Equivalence
+
+  ROPE: [-0.10 0.10]
 
 Parameter    |       H0 | inside ROPE |      95% HDI
 ----------------------------------------------------
 Intercept    | Rejected |      0.00 % | [0.15, 0.16]
 conditionllm | Rejected |      0.00 % | [0.13, 0.14]
+```
 
 Both analyses employ Bayesian equivalence testing to assess practical equivalence, allowing for flexible definition of equivalence bounds (ROPE) and providing posterior distributions and credible intervals for comprehensive inference.
