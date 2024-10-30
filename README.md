@@ -1,7 +1,7 @@
-# description for binaryV_v2.R
+# Description for data simulation and statistical analysis scripts
 
 ## Overview
-This script (binaryV_v2.R) generates simulated data for a study comparing the persuasive effectiveness of LLMs (Large Language Models) versus humans.
+The data simulation script (binaryV_v2.R) generates simulated data for a study comparing the persuasive effectiveness of LLMs (Large Language Models) versus humans.
 The simulation creates binary response data for two independent groups of participants, with each participant responding to multiple questions under both positive and negative persuasion conditions.
 
 ## Parameters
