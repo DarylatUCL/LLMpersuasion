@@ -56,7 +56,7 @@ The script outputs a combined data frame (`combined_data`) containing all respon
 5. Equal sample sizes across conditions
 
 ## Related Analyses
-The generated data can be analyzed using two complementary Bayesian equivalence testing approaches:
+The generated data can be subject to two subsequent Bayesian equivalence testing analyses:
 
 1. Within-Condition Analysis (see eqTestingBayes1.R)
 * Examines equivalence between positive and negative persuasion effects within the LLM condition
