@@ -8,7 +8,7 @@ The simulation creates binary response data for two independent groups of partic
 
 ### Sample Size and Structure
 - `n_questions`: 5 questions per participant (assumption: every participant is presented with exactly the same 5 questions)
-- `n_participants`: 25,000 participants per condition (50,000 total)
+- `n_participants`: 1000 participants per condition (2,000 total)
 - Questions 1-3: Positive persuasion (assumption: Q1 - Q3 are always assigned to the positive persuasion condition)
 - Questions 4-5: Negative persuasion (assumption: Q4 and Q5 are always assigned to the negative persuasion condition)
 
@@ -18,10 +18,10 @@ The simulation creates binary response data for two independent groups of partic
 - `between_subjects_sd`: 0.1 (individual differences between participants - each participant should exhibit differential baseline probabilites to the questions)
 - `within_subject_sd`: 0.1 (variation in individual responses)
 
-### Condition-Specific Parameters
+### Condition-Specific Parameters (group level)
 LLM Condition:
-- Positive persuasion: 0.8 (strong positive effect)
-- Negative persuasion: 0.2 (strong negative effect)
+- Positive persuasion: 0.85 (strong positive effect)
+- Negative persuasion: 0.15 (strong negative effect)
 
 Human Condition:
 - Positive persuasion: 0.65 (moderate positive effect)
@@ -72,8 +72,8 @@ Based on the current setting, the results should be as follows:
 
 Parameter                    |        H0 | inside ROPE |        95% HDI
 -----------------------------------------------------------------------
-Intercept                    |  Rejected |      0.00 % |   [0.34, 0.35]
-persuasion_directionpositive | Undecided |     32.05 % | [-0.11, -0.09]
+Intercept                    |  Rejected |      0.00 % |   [0.35, 0.40]
+persuasion_directionpositive | Undecided |     90.11 % | [-0.11, -0.04]
 ```
 
 
@@ -92,8 +92,8 @@ Based on the current setting, the results should be as follows:
 
 Parameter    |       H0 | inside ROPE |      95% HDI
 ----------------------------------------------------
-Intercept    | Rejected |      0.00 % | [0.15, 0.16]
-conditionllm | Rejected |      0.00 % | [0.13, 0.14]
+Intercept    | Rejected |      0.00 % | [0.19, 0.22]
+conditionllm | Rejected |      0.00 % | [0.10, 0.15]
 ```
 
 Both analyses employ Bayesian equivalence testing to assess practical equivalence, allowing for flexible definition of equivalence bounds (ROPE) and providing posterior distributions and credible intervals for comprehensive inference.
